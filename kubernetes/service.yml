@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: parson-test-one-svc
+  namespace: default
+  labels:
+    app: parson-test-one
+spec:
+  type: LoadBalancer
+  selector:
+    app: parson-test-one
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8080
+
